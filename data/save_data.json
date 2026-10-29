@@ -1,0 +1,33 @@
+{
+    "players": [
+        {
+            "index": 0,
+            "player_name": "",
+            "Player_id": "",
+            "unlocked_level": 1,
+            "completed_cases": [],
+            "investigation_history": [],
+            "score": 0
+        },
+        {
+            "index": 1,
+            "player_name": "akash chawla",
+            "player_id": "ak@24",
+            "unlocked_level": 4,
+            "completed_cases": [
+                "case_001",
+                "case_002",
+                "case_003"
+            ],
+            "score": 30
+        },
+        {
+            "index": 2,
+            "player_name": "amit mishra",
+            "player_id": "amit220",
+            "unlocked_level": 1,
+            "completed_cases": [],
+            "score": 0
+        }
+    ]
+}

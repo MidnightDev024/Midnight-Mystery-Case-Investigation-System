@@ -1,0 +1,534 @@
+{
+    "game_title": "Midnight Mystery Case Investigation System",
+    "max_attempts": 3,
+    "scoring": {
+        "correct_on_attempt": {
+            "1": 10,
+            "2": 8,
+            "3": 5
+        },
+        "incorrect_after_max_attempts": 0
+    },
+    "levels": [
+        {
+            "level": 1,
+            "case_id": "case_001",
+            "title": "The Midnight Museum Theft",
+            "difficulty": "Easy",
+            "locked_by_default": false,
+            "incident": "A valuable diamond disappeared from the museum between 9:00 PM and 10:00 PM during an evening event.",
+            "objective": "Identify who stole the diamond and explain which evidence supports the conclusion.",
+            "suspects": [
+                {
+                    "name": "Ravi Mehta",
+                    "role": "Museum security guard",
+                    "background": "Ravi was responsible for monitoring the exhibition hall.",
+                    "statement": "I stayed near the main entrance for most of the evening."
+                },
+                {
+                    "name": "Nisha Kapoor",
+                    "role": "Museum curator",
+                    "background": "Nisha managed the diamond exhibition and had authorized access to the display.",
+                    "statement": "I was checking inventory records in my office."
+                },
+                {
+                    "name": "Arjun Verma",
+                    "role": "Maintenance worker",
+                    "background": "Arjun was assigned to inspect a reported electrical problem that evening.",
+                    "statement": "I went to the service corridor to check the lights."
+                },
+                {
+                    "name": "Kabir Sethi",
+                    "role": "Visiting researcher",
+                    "background": "Kabir was researching the museum's collection for a publication.",
+                    "statement": "I remained in the public gallery and did not enter restricted areas."
+                }
+            ],
+            "evidences": [
+                {
+                    "id": "E1",
+                    "name": "Ravi Mehta",
+                    "role": "Security camera outage",
+                    "summary": "The camera covering the diamond display stopped recording at 9:20 PM.",
+                    "detail": "The outage was limited to the camera facing the display. Other cameras continued working."
+                },
+                {
+                    "id": "E2",
+                    "name": "Nisha Kapoor",
+                    "role": "Maintenance log",
+                    "summary": "A maintenance request was recorded at 9:15 PM.",
+                    "detail": "The request concerned the service corridor lights, not the exhibition hall camera."
+                },
+                {
+                    "id": "E3",
+                    "name": "Arjun Verma",
+                    "role": "Key checkout record",
+                    "summary": "A restricted-area key was checked out at 9:10 PM.",
+                    "detail": "The record shows that Arjun Verma signed out the key and had not yet recorded its return."
+                },
+                {
+                    "id": "E4",
+                    "name": "Kabir Sethi",
+                    "role": "Visitor observation",
+                    "summary": "A visitor saw a staff member near the restricted corridor around 9:35 PM.",
+                    "detail": "The visitor could not identify the person clearly, so this clue is not enough by itself."
+                }
+            ],
+            "interviews": [
+                {
+                    "suspect_name": "Ravi Mehta",
+                    "initial_response": "I was at the main entrance.",
+                    "follow_up": "The entrance camera confirms Ravi remained there from 9:05 PM to 9:50 PM."
+                },
+                {
+                    "suspect_name": "Nisha Kapoor",
+                    "initial_response": "I was checking inventory in my office.",
+                    "follow_up": "An inventory entry was saved from Nisha's workstation at 9:32 PM."
+                },
+                {
+                    "suspect_name": "Arjun Verma",
+                    "initial_response": "I only checked the service corridor lights.",
+                    "follow_up": "Arjun first said he returned the key before 9:20 PM, but the checkout record contains no return entry."
+                },
+                {
+                    "suspect_name": "Kabir Sethi",
+                    "initial_response": "I stayed in the public gallery.",
+                    "follow_up": "A gallery photograph places Kabir in the public area at 9:34 PM."
+                }
+            ],
+            "contradictions": [
+                {
+                    "id": "C1",
+                    "description": "Arjun said he returned the restricted-area key before 9:20 PM, but no return was recorded.",
+                    "related_evidence": [
+                        "E3"
+                    ]
+                }
+            ],
+            "culprit": "Arjun Verma",
+            "solution_explanation": "Arjun had the restricted-area key and gave an account of returning it that conflicts with the key checkout record. The other clues support the timeline but should be considered together rather than treated as proof alone."
+        },
+        {
+            "level": 2,
+            "case_id": "case_002",
+            "title": "The Missing Charity Fund",
+            "difficulty": "Easy-Medium",
+            "locked_by_default": true,
+            "incident": "Money collected during a charity evening is missing before the donation is deposited.",
+            "objective": "Determine who took the missing envelope and which records reveal the timeline.",
+            "suspects": [
+                {
+                    "name": "Meera Joshi",
+                    "role": "Event coordinator",
+                    "background": "Meera organized the event schedule and volunteer assignments.",
+                    "statement": "I was arranging the closing announcements."
+                },
+                {
+                    "name": "Dev Malhotra",
+                    "role": "Cash desk volunteer",
+                    "background": "Dev helped count donations and prepare envelopes.",
+                    "statement": "I handed the sealed envelope to the treasurer."
+                },
+                {
+                    "name": "Sana Ali",
+                    "role": "Photographer",
+                    "background": "Sana photographed the event and its closing activities.",
+                    "statement": "I was packing my camera equipment."
+                },
+                {
+                    "name": "Vikram Shah",
+                    "role": "Venue assistant",
+                    "background": "Vikram had access to storage and event rooms.",
+                    "statement": "I was moving chairs from the hall."
+                }
+            ],
+            "evidences": [
+                {
+                    "id": "E1",
+                    "name": "Meera Joshi",
+                    "role": "Donation count sheet",
+                    "summary": "The total recorded on the count sheet is higher than the amount later deposited.",
+                    "detail": "Two volunteers initialed the count before the envelope was sealed."
+                },
+                {
+                    "id": "E2",
+                    "name": "Dev Malhotra",
+                    "role": "Closing photograph",
+                    "summary": "A photograph shows the sealed envelope still on the cash desk after the public event ended.",
+                    "detail": "The photograph's timestamp is 8:42 PM."
+                },
+                {
+                    "id": "E3",
+                    "name": "Sana Ali",
+                    "role": "Storage-room access log",
+                    "summary": "The storage room was opened at 8:48 PM.",
+                    "detail": "The log records a venue access card, but the card was shared by authorized staff."
+                },
+                {
+                    "id": "E4",
+                    "name": "Vikram Shah",
+                    "role": "Deposit receipt",
+                    "summary": "The bank deposit was lower than the amount written on the count sheet.",
+                    "detail": "The receipt confirms the shortage but does not identify who caused it."
+                }
+            ],
+            "interviews": [
+                {
+                    "suspect_name": "Meera Joshi",
+                    "initial_response": "I was arranging the closing announcements.",
+                    "follow_up": "The event schedule places Meera on stage during the final announcement."
+                },
+                {
+                    "suspect_name": "Dev Malhotra",
+                    "initial_response": "I sealed the envelope after the count.",
+                    "follow_up": "Dev says the envelope was handed over at 8:35 PM, but the photograph shows it still on the cash desk at 8:42 PM."
+                },
+                {
+                    "suspect_name": "Sana Ali",
+                    "initial_response": "I was packing my equipment.",
+                    "follow_up": "Her camera contains a series of photographs taken near the stage during the relevant period."
+                },
+                {
+                    "suspect_name": "Vikram Shah",
+                    "initial_response": "I was moving chairs.",
+                    "follow_up": "Vikram's work sheet places him in the hall at 8:45 PM, though it does not rule out a brief trip elsewhere."
+                }
+            ],
+            "contradictions": [
+                {
+                    "id": "C1",
+                    "description": "Dev's claimed handover time does not match the later photograph of the envelope on the cash desk.",
+                    "related_evidence": [
+                        "E2"
+                    ]
+                }
+            ],
+            "culprit": "Dev Malhotra",
+            "solution_explanation": "The photograph conflicts with Dev's stated handover time, and he handled the envelope during counting. The count sheet and deposit receipt establish when the shortage was discovered."
+        },
+        {
+            "level": 3,
+            "case_id": "case_003",
+            "title": "The Vanishing Exhibition Painting",
+            "difficulty": "Medium",
+            "locked_by_default": true,
+            "incident": "A small painting disappears from a gallery during a private viewing, although the gallery doors appear to have remained closed.",
+            "objective": "Use the gallery timeline, packing records, and witness statements to identify the person who removed the painting.",
+            "suspects": [
+                {
+                    "name": "Leena Roy",
+                    "role": "Gallery manager",
+                    "background": "Leena supervised the private viewing and controlled the event checklist.",
+                    "statement": "I checked the guest list near the front desk."
+                },
+                {
+                    "name": "Omar Khan",
+                    "role": "Art handler",
+                    "background": "Omar prepared display materials and packing supplies.",
+                    "statement": "I packed only empty frames and protective materials."
+                },
+                {
+                    "name": "Priya Nair",
+                    "role": "Collector",
+                    "background": "Priya attended the viewing and had previously expressed interest in the painting.",
+                    "statement": "I left before the closing checks."
+                },
+                {
+                    "name": "Sameer Gill",
+                    "role": "Gallery assistant",
+                    "background": "Sameer helped record the artwork condition before and after the event.",
+                    "statement": "I completed the condition checklist in the back room."
+                }
+            ],
+            "evidences": [
+                {
+                    "id": "E1",
+                    "name": "Leena Roy",
+                    "role": "Condition checklist",
+                    "summary": "The painting was present during the first condition check but absent at closing.",
+                    "detail": "The checklist has a completed entry at 7:10 PM and a missing-item note at 7:55 PM."
+                },
+                {
+                    "id": "E2",
+                    "name": "Omar Khan",
+                    "role": "Packing material record",
+                    "summary": "One protective sleeve was used but not entered in the packing register.",
+                    "detail": "The sleeve was sized for the missing painting."
+                },
+                {
+                    "id": "E3",
+                    "name": "Priya Nair",
+                    "role": "Guest exit record",
+                    "summary": "Priya's departure was recorded at 7:40 PM.",
+                    "detail": "The record places Priya outside before the closing inventory check."
+                },
+                {
+                    "id": "E4",
+                    "name": "Sameer Gill",
+                    "role": "Back-room checklist",
+                    "summary": "The checklist was edited after the time written beside the inspection.",
+                    "detail": "The edit history shows the entry was changed at 8:02 PM."
+                }
+            ],
+            "interviews": [
+                {
+                    "suspect_name": "Leena Roy",
+                    "initial_response": "I was at the front desk.",
+                    "follow_up": "The guest register supports her presence there during most of the viewing."
+                },
+                {
+                    "suspect_name": "Omar Khan",
+                    "initial_response": "I packed only empty frames and materials.",
+                    "follow_up": "The unregistered protective sleeve was part of the supplies he prepared."
+                },
+                {
+                    "suspect_name": "Priya Nair",
+                    "initial_response": "I left before the closing checks.",
+                    "follow_up": "The exit record supports her departure at 7:40 PM."
+                },
+                {
+                    "suspect_name": "Sameer Gill",
+                    "initial_response": "I completed the checklist in the back room.",
+                    "follow_up": "Sameer cannot explain why the checklist was edited after the inspection time."
+                }
+            ],
+            "contradictions": [
+                {
+                    "id": "C1",
+                    "description": "The packing register omits a protective sleeve sized for the missing painting.",
+                    "related_evidence": [
+                        "E2"
+                    ]
+                },
+                {
+                    "id": "C2",
+                    "description": "The back-room checklist was edited after its stated inspection time.",
+                    "related_evidence": [
+                        "E4"
+                    ]
+                }
+            ],
+            "culprit": "Omar Khan",
+            "solution_explanation": "Omar prepared the packing materials, and the unregistered sleeve could have concealed the painting. The late checklist edit raises a separate concern, so the solution should be reached by weighing the evidence together."
+        },
+        {
+            "level": 4,
+            "case_id": "case_004",
+            "title": "The Locked Office Secret",
+            "difficulty": "Medium-Hard",
+            "locked_by_default": true,
+            "incident": "A confidential contract disappears from a locked office shortly before a business deal is announced.",
+            "objective": "Compare office access, printer records, and the suspects' timelines to determine who removed the contract.",
+            "suspects": [
+                {
+                    "name": "Anika Bose",
+                    "role": "Executive assistant",
+                    "background": "Anika arranged the meeting and managed office paperwork.",
+                    "statement": "I was preparing the meeting room."
+                },
+                {
+                    "name": "Rahul Khanna",
+                    "role": "IT technician",
+                    "background": "Rahul was called to resolve a printer issue near the office.",
+                    "statement": "I only checked the printer and left."
+                },
+                {
+                    "name": "Farah Qureshi",
+                    "role": "Legal associate",
+                    "background": "Farah reviewed the contract before the deal announcement.",
+                    "statement": "I returned my copy earlier in the afternoon."
+                },
+                {
+                    "name": "Kunal Bedi",
+                    "role": "Office manager",
+                    "background": "Kunal managed access cards and office supplies.",
+                    "statement": "I did not enter the executive office after 5 PM."
+                }
+            ],
+            "evidences": [
+                {
+                    "id": "E1",
+                    "name": "Anika Bose",
+                    "role": "Door access report",
+                    "summary": "An authorized card opened the office door at 5:26 PM.",
+                    "detail": "The card belongs to office management, but authorized staff sometimes borrow it."
+                },
+                {
+                    "id": "E2",
+                    "name": "Rahul Khanna",
+                    "role": "Printer queue",
+                    "summary": "A contract page was sent to the nearby printer at 5:31 PM.",
+                    "detail": "The print job was submitted from the IT workstation."
+                },
+                {
+                    "id": "E3",
+                    "name": "Farah Qureshi",
+                    "role": "Meeting room checklist",
+                    "summary": "The meeting room was marked ready at 5:20 PM.",
+                    "detail": "The checklist does not establish where Anika went after completing it."
+                },
+                {
+                    "id": "E4",
+                    "name": "Kunal Bedi",
+                    "role": "Document return register",
+                    "summary": "Farah's returned copy was logged at 4:40 PM.",
+                    "detail": "The register confirms a return but does not establish whether another copy existed."
+                }
+            ],
+            "interviews": [
+                {
+                    "suspect_name": "Anika Bose",
+                    "initial_response": "I finished preparing the room at 5:20 PM.",
+                    "follow_up": "The checklist supports that time but does not confirm her location for the rest of the period."
+                },
+                {
+                    "suspect_name": "Rahul Khanna",
+                    "initial_response": "I only checked the printer.",
+                    "follow_up": "The printer queue shows a contract page sent from his workstation shortly after the office door opened."
+                },
+                {
+                    "suspect_name": "Farah Qureshi",
+                    "initial_response": "I returned my copy earlier.",
+                    "follow_up": "The return register supports her statement, though it cannot rule out access to another copy."
+                },
+                {
+                    "suspect_name": "Kunal Bedi",
+                    "initial_response": "I did not enter the office after 5 PM.",
+                    "follow_up": "The access card assigned to office management was used at 5:26 PM, but the report alone cannot identify the person holding it."
+                }
+            ],
+            "contradictions": [
+                {
+                    "id": "C1",
+                    "description": "Rahul says he only checked the printer, but a contract page was sent from his workstation during the relevant period.",
+                    "related_evidence": [
+                        "E2"
+                    ]
+                },
+                {
+                    "id": "C2",
+                    "description": "Kunal denies entering the office, while an office-management card was used after 5 PM; the card may have been borrowed.",
+                    "related_evidence": [
+                        "E1"
+                    ]
+                }
+            ],
+            "culprit": "Rahul Khanna",
+            "solution_explanation": "The print job links Rahul's workstation to the confidential contract near the time it disappeared. The access report is supporting context rather than definitive proof because the card could have been borrowed."
+        },
+        {
+            "level": 5,
+            "case_id": "case_005",
+            "title": "The Final Alibi",
+            "difficulty": "Boss",
+            "locked_by_default": true,
+            "incident": "During a private evening gathering at a heritage hotel, a rare antique watch disappears from a locked display room. Four people had reasons to be near the room, and their accounts partly overlap.",
+            "objective": "Reconstruct the timeline, compare access records with witness statements, and identify the person whose alibi conflicts with the strongest evidence.",
+            "suspects": [
+                {
+                    "name": "Ishaan Malhotra",
+                    "role": "Hotel event manager",
+                    "background": "Ishaan coordinated the gathering and had access to the event schedule.",
+                    "statement": "I was welcoming guests in the main hall throughout the critical period."
+                },
+                {
+                    "name": "Tara Sen",
+                    "role": "Antique appraiser",
+                    "background": "Tara had examined the watch earlier and knew how the display latch worked.",
+                    "statement": "I left the display room before the guests arrived and did not return."
+                },
+                {
+                    "name": "Mohan Das",
+                    "role": "Night supervisor",
+                    "background": "Mohan carried a master key for emergency access to restricted rooms.",
+                    "statement": "I used my master key only during the scheduled corridor check."
+                },
+                {
+                    "name": "Eliza Roy",
+                    "role": "Guest and private collector",
+                    "background": "Eliza had expressed interest in buying the watch, but the owner had declined to sell it.",
+                    "statement": "I was in the music lounge from 9:15 PM until the gathering ended."
+                }
+            ],
+            "evidences": [
+                {
+                    "id": "E1",
+                    "role": "Display latch report",
+                    "summary": "The display was opened with a key rather than forced.",
+                    "detail": "The latch report narrows the likely method but does not identify who used the key."
+                },
+                {
+                    "id": "E2",
+                    "role": "Corridor inspection sheet",
+                    "summary": "The night supervisor recorded a corridor check at 9:24 PM.",
+                    "detail": "The sheet has a correction made later that evening, changing the recorded finish time from 9:28 PM to 9:18 PM."
+                },
+                {
+                    "id": "E3",
+                    "role": "Music lounge photograph",
+                    "summary": "A group photograph was taken in the lounge at 9:22 PM.",
+                    "detail": "Eliza appears in the photograph, but the image does not prove she stayed there continuously."
+                },
+                {
+                    "id": "E4",
+                    "role": "Event schedule",
+                    "summary": "Ishaan was scheduled to welcome a group in the main hall at 9:20 PM.",
+                    "detail": "The schedule establishes a duty but does not prove he performed it without interruption."
+                },
+                {
+                    "id": "E5",
+                    "role": "Appraisal note",
+                    "summary": "Tara's note describes the display latch and a small scratch near its keyhole.",
+                    "detail": "The note was written earlier that afternoon, when Tara had legitimate access to inspect the watch."
+                },
+                {
+                    "id": "E6",
+                    "role": "Witness timeline",
+                    "summary": "A waiter remembers seeing someone leave the restricted corridor around 9:21 PM.",
+                    "detail": "The waiter recalls a dark jacket but cannot confidently identify the person."
+                }
+            ],
+            "interviews": [
+                {
+                    "suspect_name": "Ishaan Malhotra",
+                    "initial_response": "I welcomed guests in the main hall.",
+                    "follow_up": "The event schedule supports his assignment, but no independent record confirms his exact location throughout the period."
+                },
+                {
+                    "suspect_name": "Tara Sen",
+                    "initial_response": "I left the display room before the guests arrived.",
+                    "follow_up": "Her appraisal note shows prior knowledge of the latch, but there is no direct evidence that she returned during the theft window."
+                },
+                {
+                    "suspect_name": "Mohan Das",
+                    "initial_response": "My corridor check ended at 9:18 PM.",
+                    "follow_up": "The inspection sheet was corrected later, and the display latch was opened with a key. These facts make the timing of his check important."
+                },
+                {
+                    "suspect_name": "Eliza Roy",
+                    "initial_response": "I stayed in the music lounge from 9:15 PM onward.",
+                    "follow_up": "The photograph places her in the lounge at 9:22 PM, but it does not independently confirm her entire alibi."
+                }
+            ],
+            "contradictions": [
+                {
+                    "id": "C1",
+                    "description": "Mohan's stated finish time conflicts with the later correction on the inspection sheet.",
+                    "related_evidence": [
+                        "E2"
+                    ]
+                },
+                {
+                    "id": "C2",
+                    "description": "The waiter recalls someone leaving the restricted corridor around 9:21 PM, shortly after the disputed inspection time.",
+                    "related_evidence": [
+                        "E6",
+                        "E2"
+                    ]
+                }
+            ],
+            "culprit": "Mohan Das",
+            "solution_explanation": "Mohan's master-key access, the correction to his inspection sheet, and the witness timeline collectively make his alibi inconsistent. No single clue proves guilt on its own; the intended solution comes from comparing the timeline and access evidence."
+        }
+    ]
+}

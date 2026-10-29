@@ -1,0 +1,7 @@
+
+user_identifier,user_name,user_id,case_id,level,case_title,attempt_number,theory,accused_suspect,actual_culprit,attempt_result,case_result,level_score,total_score,completed_at
+USER001,akash chawla,ak@24,CASE-001,1,The Midnight Museum Theft,1,The guard had access,Ravi Mehta,Arjun Verma,Incorrect,In Progress,,,
+USER002,akash chawla,ak@24,case_001,1,The Midnight Museum Theft,1,according to me Arjun Kapoor is the culprit because he is the one who's statement is not matching with investigation report,Arjun Verma,Arjun Verma,Correct,Solved,10,10,2026-10-25 23:04:25
+USER002,akash chawla,ak@24,case_002,2,The Missing Charity Fund,1,"The photograph conflicts with Dev's stated handover time, and he handled the envelope during counting. The count sheet and deposit receipt establish when the shortage was discovered.",Dev Malhotra,Dev Malhotra,Correct,Solved,10,20,2026-10-26 21:52:43
+USER002,akash chawla,ak@24,case_003,3,The Vanishing Exhibition Painting,1,i think leena roy is the actual culprit,Leena Roy,Omar Khan,Incorrect,In Progress,,,
+USER002,akash chawla,ak@24,case_003,3,The Vanishing Exhibition Painting,1,"Omar prepared the packing materials, and the unregistered sleeve could have concealed the painting. The late checklist edit raises a separate concern, so the solution should be reached by weighing the evidence together.",Omar Khan,Omar Khan,Correct,Solved,10,30,2026-10-27 21:41:55
